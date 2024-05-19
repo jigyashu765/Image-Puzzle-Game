@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Image Puzzle Game</h1>
+            <div class="score-container">
+                <div class="steps">Steps: <span id="steps">0</span></div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div id="puzzle-container" class="grid"></div>
+        </div>
+        <div class="controls">
+            <button onclick="initGame(3, false)">Easy</button>
+            <button onclick="initGame(4, false)">Intermediate</button>
+            <button onclick="initGame(5, false)">Hard</button>
+        </div>
+        <button onclick="resetGame()">Reset Game</button>
+        <button onclick="initGame(3, true)">New Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #faf8ef;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.score-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.steps {
+    font-size: 24px;
+    font-weight: bold;
+    background: #bbada0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #8f7a66;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #776e65;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#puzzle-container {
+    display: grid;
+    gap: 2px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: auto;
+    border: 2px solid #333;
+    background-color: white;
+}
+
+.puzzle-piece {
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: absolute;
+    /* border-radius: 5px; */
+}
+
+.puzzle-piece:active {
+    transform: scale(0.98);
+}
+
+.hidden {
+    display: none;
+}
+
+.winning-message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: green;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    #puzzle-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .puzzle-piece {
+        font-size: 18px;
+    }
+}
